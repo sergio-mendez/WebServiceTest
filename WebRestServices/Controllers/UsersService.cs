@@ -28,5 +28,23 @@ namespace WebRestServices.Controllers
             }
             return users;
         }
+
+        [HttpPost]
+        [Route("RegistrarUsuario")]
+        public string RegistrarUsuario([FromBody] Users user)
+        {
+            string result;
+            try
+            {
+                UsersBL usersBL = new UsersBL();
+                usersBL.insertUserInfo(user);
+                result = "Registro Exitoso";
+            }
+            catch (Exception ex)
+            {
+                result = "Registro Fallido: "+ex.Message;
+            }
+            return result;
+        }
     }
 }

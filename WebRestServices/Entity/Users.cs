@@ -7,8 +7,8 @@ namespace WebRestServices.Entity
 {
     public class Users
     {
-        public int UserId { get; set; }
-        public string Firt_Name { get; set; }
+        public int User_Id { get; set; }
+        public string First_Name { get; set; }
         public string Last_Name { get; set; }
         public DateTime Birth_Date { get; set; }
         public string Email { get; set; }

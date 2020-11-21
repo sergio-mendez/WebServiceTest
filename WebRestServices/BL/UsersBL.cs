@@ -15,5 +15,12 @@ namespace WebRestServices.BL
             List<Users> users = userDalT.get();            
             return users;
         }
+
+        public void insertUserInfo(Users users)
+        {
+            UserDAL userDalT = new UserDAL();
+            users.Birth_Date = DateTime.Now;
+            userDalT.insert(users);
+        }
     }
 }
